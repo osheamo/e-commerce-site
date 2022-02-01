@@ -4,13 +4,13 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/homepage/homepage.component";
-import Hats from "./components/hats/hats.component";
+import ShopPage from './pages/shop/shop.component';
 
 function App() {
   return (
     <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/hats" component={Hats} />
+        <Route path="/shop" component={ShopPage} />
     </Switch>
   );
 }
