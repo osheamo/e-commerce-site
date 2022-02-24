@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.util";
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 import "./header.styles.scss";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
+
+const notify = () => toast("You have signed out!");
 
 const Header = ({currentUser}) => (
   <div className="header">
@@ -14,7 +18,7 @@ const Header = ({currentUser}) => (
         <Link className="option" to='/shop'>
             SHOP
         </Link>
-        <Link className="option" to='/contact'>
+        <Link className="option" onClick={notify} to='/contact'>
             CONTACT
         </Link>
         {
@@ -27,6 +31,8 @@ const Header = ({currentUser}) => (
           SIGN-IN
         </Link>
         }
+         <ToastContainer />
+          <ToastContainer />
     </div>
   </div>
 );
