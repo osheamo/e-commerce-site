@@ -47,7 +47,7 @@ class SignIn extends React.Component {
             value={this.state.email}
             label="email"
             handleChange={this.handleChange}
-            autocomplete="on"
+            autoComplete="on"
             required
           />
           <FormInput
@@ -56,11 +56,11 @@ class SignIn extends React.Component {
             value={this.state.password}
             label="password"
             handleChange={this.handleChange}
-            autocomplete="on"
+            autoComplete="on"
             required
           />
           <div className="buttons">
-            <CustomButton type="submit">Sign in</CustomButton>
+            <CustomButton type="button">Sign in</CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignin>
               Sign in with Google
             </CustomButton>
